@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build Electron app
-        run: npm run dist
+        run: npm run dist:linux:arm64
 
       - name: Create / update GitHub Release
         uses: ncipollo/release-action@v1
