@@ -37,8 +37,9 @@ function createWindow() {
   mainWindow.loadURL(config.appUrl);
 
   mainWindow.webContents.on('did-fail-load', () => {
-    console.error('Caricamento URL fallito, carico fallback locale');
-    mainWindow.loadFile('index.html');
+    const indexPath = path.join(__dirname, 'renderer', 'index.html');
+    console.error('Caricamento URL fallito, carico fallback locale:', indexPath);
+    mainWindow.loadFile(indexPath);
   });
 
   mainWindow.on('closed', () => {
