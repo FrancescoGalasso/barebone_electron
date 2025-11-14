@@ -1,5 +1,5 @@
 {
-  "appUrl": "http://localhost:5173",
+  "appUrl": "http://localhost:8080/admin",
   "window": {
     "width": 1024,
     "height": 768
