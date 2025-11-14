@@ -12,7 +12,7 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --publish=never",
-    "dist:linux": "electron-builder --linux --publish=never",
+    "dist:linux:arm64": "electron-builder --linux --arm64 --publish=never",
     "dist:win": "electron-builder --win --publish=never"
   },
   "dependencies": {},
