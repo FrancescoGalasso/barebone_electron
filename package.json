@@ -5,7 +5,7 @@
   "main": "main.js",
   "author": "Francesco Galasso",
   "license": "MIT",
-  "private": True,
+  "private": true,
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder",
