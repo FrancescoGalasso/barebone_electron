@@ -33,6 +33,33 @@ function createWindow() {
     }
   });
 
+  const isLinux = process.platform === 'linux'
+
+  if (isLinux) {
+    const template = [
+      {
+        label: 'View',
+        submenu: [
+          { role: 'reload' },
+          { role: 'toggleDevTools' },
+        ],
+      },
+      {
+        label: 'Help',
+        submenu: [
+          {
+            label: 'Info',
+            click: () => {
+              console.log('Info cliccato')
+            },
+          },
+        ],
+      },
+    ]
+
+    const menu = Menu.buildFromTemplate(template)
+    Menu.setApplicationMenu(menu)
+  }
   // "Ascolta" l'indirizzo specificato in config: in pratica apre quella URL
   mainWindow.loadURL(config.appUrl);
 
