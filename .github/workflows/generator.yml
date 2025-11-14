@@ -1,10 +1,10 @@
-name: Print package-lock.json
+name: Generate package-lock.json
 
 on:
   workflow_dispatch:
 
 jobs:
-  generate-and-print-lockfile:
+  generate-lockfile:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,5 +19,9 @@ jobs:
       - name: Generate package-lock.json
         run: npm install --package-lock-only
 
-      - name: Print package-lock.json
-        run: cat package-lock.json
+      - name: Upload package-lock.json as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-lock.json
+          path: package-lock.json
+          retention-days: 7
