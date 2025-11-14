@@ -32,7 +32,7 @@ jobs:
       - name: Build Electron app
         run: npm run dist
 
-      - name: Create / update GitHub Release (only for tags)
+      - name: Create / update GitHub Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ github.ref_name }}
