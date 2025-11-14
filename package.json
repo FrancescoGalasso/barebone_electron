@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "Barebone Electron client that loads a URL from config.json",
   "main": "main.js",
-  "author": "Francesco Galasso",
+  "author": {
+    "name": "Francesco Galasso",
+    "email": "info@alfadispenser.com"
+  },
   "license": "MIT",
   "private": true,
   "scripts": {
