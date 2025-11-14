@@ -1,0 +1,45 @@
+{
+  "name": "sample_client",
+  "version": "0.0.1",
+  "description": "Barebone Electron client that loads a URL from config.json",
+  "main": "main.js",
+  "author": "Francesco Galasso",
+  "license": "MIT",
+  "private": True,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "barebone-electron-client",
+    "productName": "MyElectronClient",
+    "files": [
+      "main.js",
+      "config.json",
+      "renderer/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
+
