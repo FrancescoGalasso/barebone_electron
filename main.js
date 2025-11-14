@@ -36,6 +36,11 @@ function createWindow() {
   // "Ascolta" l'indirizzo specificato in config: in pratica apre quella URL
   mainWindow.loadURL(config.appUrl);
 
+  mainWindow.webContents.on('did-fail-load', () => {
+    console.error('Caricamento URL fallito, carico fallback locale');
+    mainWindow.loadFile('index.html');
+  });
+
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
