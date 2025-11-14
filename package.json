@@ -17,8 +17,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "^31.0.0",
-    "electron-builder": "^25.0.0"
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.0"
   },
   "build": {
     "appId": "barebone-electron-client",
@@ -31,6 +31,7 @@
     "directories": {
       "output": "dist"
     },
+    "publish": "never",
     "linux": {
       "target": [
         "AppImage",
