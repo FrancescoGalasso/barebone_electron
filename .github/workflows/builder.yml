@@ -45,5 +45,5 @@ jobs:
           allowUpdates: true
           artifactErrorsFailBuild: true
           artifacts: |
-            dist/*.AppImage
+            dist/*.deb
 

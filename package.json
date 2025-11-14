@@ -33,9 +33,14 @@
     },
     "linux": {
       "target": [
-        "AppImage"
+        "deb"
       ],
       "category": "Utility"
+    },
+    "deb": {
+      "depends": [
+        "zlib1g"
+      ]
     },
     "win": {
       "target": [
