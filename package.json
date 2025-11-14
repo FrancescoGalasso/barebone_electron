@@ -1,6 +1,6 @@
 {
   "name": "sample_client",
-  "version": "0.0.1",
+  "version": "0.0.1+b",
   "description": "Barebone Electron client that loads a URL from config.json",
   "main": "main.js",
   "author": {
